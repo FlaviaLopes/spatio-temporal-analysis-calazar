@@ -20,9 +20,6 @@ def fix_co_uf(uf):
     if df.loc[c_inf, :].shape[0] > 0:
         df.loc[c_inf, 'CO_UF_INF'] = uf  
 
-path_leivis = '../data/interim/leivis'
-df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
-
 #prepara dados de estimativas populacionais e exporta csv para /processed
 path_populacao = '../data/interim/populacao/interim_populacao.csv'
 populacao = pd.read_csv(path_populacao)
