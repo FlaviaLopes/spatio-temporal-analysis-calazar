@@ -20,9 +20,16 @@ def fix_co_uf(uf):
     if df.loc[c_inf, :].shape[0] > 0:
         df.loc[c_inf, 'CO_UF_INF'] = uf  
 
+#prepara dados de estimativas populacionais e exporta csv para /processed
+path_populacao = '../data/interim/populacao/interim_populacao.csv'
+populacao = pd.read_csv(path_populacao)
+populacao.MUNIC_RES = populacao.MUNIC_RES.apply(lambda x: int(str(x)[:6]))
+populacao = pd.pivot_table(populacao, values='POPULACAO', index='MUNIC_RES', columns='ANO')
+populacao.reset_index().to_csv('../data/processed/processed_populacao.csv', index=False)
+
+#prepara, limpa e transforma, dados de notificações e exporta csv para /interim/leivis
 path_leivis = '../data/interim/leivis'
 df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
-
 # renomeia colunas
 df.columns = [
 	'TP_NOT', 'ID_AGRAVO', 'DT_NOT', 'SEMANA_NOT', 'ANO', 'CO_UF_NOT',
