@@ -27,6 +27,14 @@ populacao.MUNIC_RES = populacao.MUNIC_RES.apply(lambda x: int(str(x)[:6]))
 populacao = pd.pivot_table(populacao, values='POPULACAO', index='MUNIC_RES', columns='ANO')
 populacao.reset_index().to_csv('../data/processed/processed_populacao.csv', index=False)
 
+#prepara dados de municípios e exporta csv para /processed
+path_municipios = '../data/raw/RELATORIO_DTB_BRASIL_MUNICIPIO.xls'
+municipios = pd.read_excel(path_municipios)
+municipios = municipios.loc[:, ['Código Município Completo','Nome_Município', 'Nome_UF', 'Nome_Mesorregião', 'Nome_Microrregião']]
+municipios.columns = ['ibge_code', 'municipio','estado','mesorregiao','microrregiao']
+municipios.ibge_code = municipios.ibge_code.apply(lambda x: str(x)[:6])
+municipios.to_csv('../data/processed/processed_municipios.csv', index=False, encoding='utf-8')
+
 #prepara, limpa e transforma, dados de notificações e exporta csv para /interim/leivis
 path_leivis = '../data/interim/leivis'
 df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
