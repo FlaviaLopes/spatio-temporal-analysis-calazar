@@ -1,2 +1,3 @@
 venv/*
 data/raw/poligonos/*
+notebooks/.ipynb_checkpoints/*
