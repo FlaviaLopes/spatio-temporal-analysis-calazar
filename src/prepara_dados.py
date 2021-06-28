@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 
 def fix_co_uf(uf):  
-	'''
-	Todo código de município se inicia com o código da UF. 
-	Esta função verifica se o campo uf (residência, infecção e notificação) está
-	de acordo com o código do município e corrige.
-	'''
+    '''
+    Todo código de município se inicia com o código da UF. 
+    Esta função verifica se o campo uf (residência, infecção e notificação) está
+    de acordo com o código do município e corrige.
+    '''
     c_resi = (df.CO_MN_RESI.astype('string').str.startswith(str(uf)) & (df.CO_UF_RESI != uf))
     c_not = (df.CO_MN_NOT.astype('string').str.startswith(str(uf)) & (df.CO_UF_NOT != uf))
     c_inf = (df.CO_MN_INF.astype('string').str.startswith(str(uf)) & (df.CO_UF_INF != uf))
@@ -20,6 +20,25 @@ def fix_co_uf(uf):
     if df.loc[c_inf, :].shape[0] > 0:
         df.loc[c_inf, 'CO_UF_INF'] = uf  
 
+path_leivis = '../data/interim/leivis'
+df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
+
+#prepara dados de estimativas populacionais e exporta csv para /processed
+path_populacao = '../data/interim/populacao/interim_populacao.csv'
+populacao = pd.read_csv(path_populacao)
+populacao.MUNIC_RES = populacao.MUNIC_RES.apply(lambda x: int(str(x)[:6]))
+populacao = pd.pivot_table(populacao, values='POPULACAO', index='MUNIC_RES', columns='ANO')
+populacao.reset_index().to_csv('../data/processed/processed_populacao.csv', index=False)
+
+#prepara dados de municípios e exporta csv para /processed
+path_municipios = '../data/raw/RELATORIO_DTB_BRASIL_MUNICIPIO.xls'
+municipios = pd.read_excel(path_municipios)
+municipios = municipios.loc[:, ['Código Município Completo','Nome_Município', 'Nome_UF', 'Nome_Mesorregião', 'Nome_Microrregião']]
+municipios.columns = ['ibge_code', 'municipio','estado','mesorregiao','microrregiao']
+municipios.ibge_code = municipios.ibge_code.apply(lambda x: str(x)[:6])
+municipios.to_csv('../data/processed/processed_municipios.csv', index=False, encoding='utf-8')
+
+#prepara, limpa e transforma, dados de notificações e exporta csv para /interim/leivis
 path_leivis = '../data/interim/leivis'
 df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
 
@@ -53,6 +72,15 @@ for it in set(
 
 #remove 43 duplicações
 df.drop(df.loc[df.NDUPLIC_N == 2, :].index, axis=0, inplace=True)
+
+#Estes são casos registrados em municípios que hoje pertencem a Tocantins,
+#mas estão com o código de UF antigo (52 Goiás). O restante do código continua o mesmo, somente substitui 52 por 17.
+transferidos = pd.read_csv('../data/raw/transferidos_go-to.csv')
+transferidos.columns = ['ibge_code','municipio']
+transferidos = transferidos.set_index('ibge_code').to_dict()['municipio']
+idx = df.loc[(~df.CO_MN_INF.map(transferidos).isnull()), :].index
+df.loc[idx, 'CO_MN_INF'] = df.loc[idx, 'CO_MN_INF'].astype(int).astype('string').str.replace('52', '17')
+df.loc[idx, 'CO_UF_INF'] = 17
 
 #substitui data inválidas por np.nan
 datas = ['TRATAMENTO','DT_NOT', 'DT_PRI_SIN', 'DT_NASC', 'DT_INVEST', 'DT_OBITO', 'DT_ENCERRAMENTO', 'DT_DESLC1', 'DT_DESLC2', 'DT_DESLC3']
@@ -107,6 +135,19 @@ for index, row in df.loc[df.IDADE.isnull(), ['NU_IDADE_N', 'IDADE']].iterrows():
     if str(df.loc[index, 'NU_IDADE_N']).startswith('1'):
         df.loc[index, 'IDADE'] = 0
 
+#convertendo colunas para tipo int, exceto peso e idade
+cols = ['CS_GESTANT', 'CS_RACA', 'CS_ESCOL_N', 'CO_PAIS', 'FEBRE', 'FRAQUEZA',
+       'EDEMA', 'EMAGRECIMENTO', 'TOSSE', 'PALIDEZ', 'BACO', 'INFECCIOSO',
+       'FEN_HEMORR', 'FIGADO', 'ICTERICIA', 'OUTROS', 'HIV',
+       'DIAG_PARASITOLOGICO', 'IFI', 'OUTRO', 'ENTRADA', 'DROGA', 'DOSE', 
+       'AMPOLAS', 'FALENCIA', 'CRITERIO', 'TPAUTOCTO', 'CO_UF_INF',
+       'DOENCA_TRABALHO', 'EVOLUCAO', 'DS_MUN_1', 'CO_UF_1', 'CO_PAIS_1',
+       'DS_MUN_2', 'CO_UF_2', 'CO_PAIS_2', 'DS_MUN_3', 'CO_UF_3', 'CO_PAIS_3']
+
+df[cols] = df[cols].astype(np.float).astype("Int32")
+
+df = df.loc[df.CLASSI_FIN == 1, :].copy()
+
 #excluindo colunas desnecessárias
 df.drop(
     ['CS_FLXRET', 'FLXRECEBI', 'MIGRADO_W', 'NDUPLIC_N', 
@@ -116,17 +157,6 @@ df.drop(
     inplace=True
 )
 
-#convertendo colunas para tipo int, exceto peso e idade
-cols = ['CS_GESTANT', 'CS_RACA', 'CS_ESCOL_N', 'CO_PAIS', 'FEBRE', 'FRAQUEZA',
-       'EDEMA', 'EMAGRECIMENTO', 'TOSSE', 'PALIDEZ', 'BACO', 'INFECCIOSO',
-       'FEN_HEMORR', 'FIGADO', 'ICTERICIA', 'OUTROS', 'HIV',
-       'DIAG_PARASITOLOGICO', 'IFI', 'OUTRO', 'ENTRADA', 'DROGA', 'DOSE', 
-       'AMPOLAS', 'FALENCIA', 'CRITERIO', 'TPAUTOCTO', 'CO_UF_INF',
-       'DOENCA_TRABALHO', 'EVOLUCAO', 'DS_MUN_1', 'CO_UF_1', 'CO_PAIS_1',
-       'DS_MUN_2', 'CO_UF_2', 'CO_PAIS_2', 'DS_MUN_3', 'CO_UF_3', 'CO_PAIS_3']
-df[cols] = df[cols].astype(np.float).astype("Int32")
-
-df = df.loc[df.CLASSI_FIN == 1, :].copy()
 df.to_csv('../data/interim/leivis/interim_leivis_confirmados.csv',index=False)
 
 #Não foram removidos CO_UF_INF e CO_MN_INF nulos
