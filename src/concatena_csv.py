@@ -19,6 +19,7 @@ def concat_data(path):
                 raise
     #agrupando bases - todos anos
     files = os.listdir(path)
+    files = [it for it in files if '.csv' in it]
     df = pd.DataFrame()
     for filename in files:
         df = pd.concat([df, pd.read_csv(f'{path}/{filename}', encoding ='latin1', low_memory=False)], axis=0)
