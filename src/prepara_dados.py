@@ -38,7 +38,6 @@ municipios.to_csv('../data/processed/processed_municipios.csv', index=False, enc
 #prepara, limpa e transforma, dados de notificações e exporta csv para /interim/leivis
 path_leivis = '../data/interim/leivis'
 df = pd.read_csv(f'{path_leivis}/interim_leivis.csv', low_memory=False).drop('Unnamed: 0', axis=1)
-
 # renomeia colunas
 df.columns = [
 	'TP_NOT', 'ID_AGRAVO', 'DT_NOT', 'SEMANA_NOT', 'ANO', 'CO_UF_NOT',
