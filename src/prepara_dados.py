@@ -152,6 +152,7 @@ df.drop(
     axis=1,
     inplace=True
 )
+
 df.to_csv('../data/interim/leivis/interim_leivis_confirmados.csv',index=False)
 
 #Não foram removidos CO_UF_INF e CO_MN_INF nulos
