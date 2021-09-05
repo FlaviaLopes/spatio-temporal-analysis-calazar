@@ -1,0 +1,278 @@
+                                 _____________________________
+
+                                         SaTScan v10.0
+                                 _____________________________
+
+
+Program run on: Fri Sep  3 14:45:24 2021
+
+Retrospective Space-Time analysis
+scanning for clusters with high rates
+using the Discrete Poisson model.
+_______________________________________________________________________________________________
+
+SUMMARY OF DATA
+
+Study period.......................: 2007/1/1 to 2019/12/31
+Number of locations................: 500
+Population, averaged over time.....: 16093001
+Total number of cases..............: 14506
+Annual cases / 100000..............: 6,9
+_______________________________________________________________________________________________
+
+CLUSTERS DETECTED
+
+1.Location IDs included.: 170305, 170550, 170320, 170230, 171488, 170360, 171630, 171180,
+                          171570, 171665, 171110, 170210, 171840, 172130, 170600, 171090,
+                          171886, 170930, 150270, 171395, 170388, 171670
+  Coordinates / radius..: (7,903014 S, 48,675544 W) / 104,21 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 343050
+  Number of cases.......: 1586
+  Expected cases........: 156,40
+  Annual cases / 100000.: 70,3
+  Observed / expected...: 10,14
+  Relative risk.........: 11,26
+  Log likelihood ratio..: 2318,121562
+  P-value...............: < 0,00000000000000001
+
+2.Location IDs included.: 150470, 150795, 150460, 150210, 150330, 150120, 150800, 150400,
+                          150520, 150020
+  Coordinates / radius..: (2,683911 S, 49,074042 W) / 102,99 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 581080
+  Number of cases.......: 880
+  Expected cases........: 263,70
+  Annual cases / 100000.: 23,1
+  Observed / expected...: 3,34
+  Relative risk.........: 3,49
+  Log likelihood ratio..: 457,728917
+  P-value...............: < 0,00000000000000001
+
+3.Location IDs included.: 210300, 210030, 211220, 211107, 210660, 210330, 210340
+  Coordinates / radius..: (4,866409 S, 43,299187 W) / 71,78 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 557140
+  Number of cases.......: 769
+  Expected cases........: 262,38
+  Annual cases / 100000.: 20,3
+  Observed / expected...: 2,93
+  Relative risk.........: 3,04
+  Log likelihood ratio..: 329,402097
+  P-value...............: < 0,00000000000000001
+
+4.Location IDs included.: 150190
+  Coordinates / radius..: (1,632969 S, 48,089877 W) / 0 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 26472
+  Number of cases.......: 102
+  Expected cases........: 12,12
+  Annual cases / 100000.: 58,3
+  Observed / expected...: 8,41
+  Relative risk.........: 8,47
+  Log likelihood ratio..: 127,639993
+  P-value...............: < 0,00000000000000001
+
+5.Location IDs included.: 210270, 210880, 210540, 210663, 210675
+  Coordinates / radius..: (3,621612 S, 44,262690 W) / 30,96 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 141161
+  Number of cases.......: 165
+  Expected cases........: 64,25
+  Annual cases / 100000.: 17,8
+  Observed / expected...: 2,57
+  Relative risk.........: 2,59
+  Log likelihood ratio..: 55,225659
+  P-value...............: < 0,00000000000000001
+
+6.Location IDs included.: 150130
+  Coordinates / radius..: (1,498618 S, 48,634231 W) / 0 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 107722
+  Number of cases.......: 120
+  Expected cases........: 47,53
+  Annual cases / 100000.: 17,5
+  Observed / expected...: 2,52
+  Relative risk.........: 2,54
+  Log likelihood ratio..: 38,853506
+  P-value...............: 0,00000000000026
+
+7.Location IDs included.: 210125, 210960, 211020
+  Coordinates / radius..: (2,936346 S, 44,357969 W) / 25,01 km
+  Time frame............: 2011/1/1 to 2016/12/31
+  Population............: 91387
+  Number of cases.......: 103
+  Expected cases........: 38,32
+  Annual cases / 100000.: 18,6
+  Observed / expected...: 2,69
+  Relative risk.........: 2,70
+  Log likelihood ratio..: 37,299262
+  P-value...............: 0,0000000000011
+
+8.Location IDs included.: 211400
+  Coordinates / radius..: (3,259882 S, 45,912613 W) / 0 km
+  Time frame............: 2014/1/1 to 2019/12/31
+  Population............: 49564
+  Number of cases.......: 65
+  Expected cases........: 21,20
+  Annual cases / 100000.: 21,3
+  Observed / expected...: 3,07
+  Relative risk.........: 3,08
+  Log likelihood ratio..: 29,101394
+  P-value...............: 0,0000000020
+
+9.Location IDs included.: 150630
+  Coordinates / radius..: (0,796624 S, 48,629984 W) / 0 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Population............: 21057
+  Number of cases.......: 36
+  Expected cases........: 9,46
+  Annual cases / 100000.: 26,4
+  Observed / expected...: 3,81
+  Relative risk.........: 3,81
+  Log likelihood ratio..: 21,594863
+  P-value...............: 0,0000020
+
+10.Location IDs included.: 150307
+   Coordinates / radius..: (2,168306 S, 47,075977 W) / 0 km
+   Time frame............: 2007/1/1 to 2013/12/31
+   Population............: 25355
+   Number of cases.......: 32
+   Expected cases........: 12,22
+   Annual cases / 100000.: 18,2
+   Observed / expected...: 2,62
+   Relative risk.........: 2,62
+   Log likelihood ratio..: 11,041324
+   P-value...............: 0,028
+
+11.Location IDs included.: 211120
+   Coordinates / radius..: (2,574257 S, 44,130522 W) / 0 km
+   Time frame............: 2014/1/1 to 2019/12/31
+   Population............: 163570
+   Number of cases.......: 111
+   Expected cases........: 72,99
+   Annual cases / 100000.: 10,5
+   Observed / expected...: 1,52
+   Relative risk.........: 1,52
+   Log likelihood ratio..: 8,571561
+   P-value...............: 0,294
+_______________________________________________________________________________________________
+
+PARAMETER SETTINGS
+
+Input
+-----
+  Case File        : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/Cases_PA_MA_TO.cas
+  Population File  : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/Population_PA_MA_TO.pop
+  Time Precision   : Year
+  Start Time       : 2007/1/1
+  End Time         : 2019/12/31
+  Coordinates File : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/Coordinates_PA_MA_TO.geo
+  Coordinates      : Latitude/Longitude
+
+Analysis
+--------
+  Type of Analysis        : Retrospective Space-Time
+  Probability Model       : Discrete Poisson
+  Scan for Areas with     : High Rates
+  Time Aggregation Units  : Year
+  Time Aggregation Length : 3
+
+Output
+------
+  Main Results File       : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.txt
+  Cluster File            : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.col.txt
+  Google Earth File       : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.kml
+  Google Maps File        : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.clustermap.html
+  Shapefile (Cluster)     : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.clustermap.col.shp
+  Cartesian Graph File    : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.html
+  Cluster File            : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.col.dbf
+  Stratified Cluster File : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.sci.txt
+  Location File           : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.gis.txt
+  Location File           : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.gis.dbf
+  Shapefile (Locations)   : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.gis.shp
+  Risk Estimates File     : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.rr.txt
+  Simulated LLRs File     : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/data/processed/satscan_experiment_data/results_PA_MA_TO/poisson/results.cluster.llr.txt
+
+Data Checking
+-------------
+  Temporal Data Check     : Check to ensure that all cases and controls are within the specified temporal study period.
+  Geographical Data Check : Check to ensure that all observations (cases, controls and populations) are within the specified geographical area.
+
+Spatial Neighbors
+-----------------
+  Use Non-Euclidean Neighbors file : No
+  Use Meta Locations File          : No
+  Multiple Coordinates Type        : Allow only one set of coordinates per location ID.
+
+Locations Network
+-----------------
+  Use Locations Network File : No
+  Locations Network File     : 
+  Locations Network Purpose  : Network Definition
+
+Spatial Window
+--------------
+  Maximum Spatial Cluster Size     : 50 percent of population at risk
+  Include Purely Temporal Clusters : No
+  Window Shape                     : Circular
+
+Temporal Window
+---------------
+  Minimum Temporal Cluster Size   : 1 Year
+  Maximum Temporal Cluster Size   : 50 percent of study period
+  Include Purely Spatial Clusters : No
+
+Cluster Restrictions
+--------------------
+  Minimum Cases in Cluster for High Rates : 2
+  Restrict High Rate Clusters             : No
+
+Space And Time Adjustments
+--------------------------
+  Temporal Adjustment                     : None
+  Adjust for Weekly Trends, Nonparametric : No
+  Spatial Adjustment                      : None
+  Adjust for known relative risks         : No
+
+Inference
+---------
+  P-Value Reporting                  : Default Combination
+  Number of Replications             : 999
+  Adjusting for More Likely Clusters : No
+
+Cluster Drilldown
+-----------------
+  Standard Drilldown on Detected Clusters  : No
+  Bernoulli Drilldown on Detected Clusters : No
+
+Spatial Output
+--------------
+  Automatically Launch Map                  : Yes
+  Compress KML File into KMZ File           : No
+  Include All Location IDs in the Clusters  : Yes
+  Cluster Location Threshold - Separate KML : 1000
+  Report Hierarchical Clusters              : Yes
+  Criteria for Reporting Secondary Clusters : No Geographical Overlap
+  Restrict Reporting to Smaller Clusters    : No
+
+Temporal Graphs
+---------------
+  Produce Temporal Graphs : No
+
+Other Output
+------------
+  Report Critical Values     : No
+  Report Monte Carlo Rank    : No
+  Print ASCII Column Headers : No
+
+Run Options
+-----------
+  Processor Usage   : All Available Processors
+  Suppress Warnings : No
+  Logging Analysis  : No
+_______________________________________________________________________________________________
+
+Program completed  : Fri Sep  3 14:45:27 2021
+Total Running Time : 3 seconds
+Processor Usage    : 8 processors

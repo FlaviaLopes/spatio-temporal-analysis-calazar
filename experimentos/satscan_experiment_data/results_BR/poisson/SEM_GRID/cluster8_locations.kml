@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<name>Cluster 8 Locations</name>
+		<Placemark><name>316805</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.6116,-19.7386,0</coordinates></Point></Placemark>
+		<Placemark><name>313120</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.7494,-19.7578,0</coordinates></Point></Placemark>
+</Document>
+</kml>
