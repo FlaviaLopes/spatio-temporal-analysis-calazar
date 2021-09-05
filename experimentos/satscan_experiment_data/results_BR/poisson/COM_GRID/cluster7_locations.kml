@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<name>Cluster 7 Locations</name>
+		<Placemark><name>315430</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.1531,-19.2119,0</coordinates></Point></Placemark>
+		<Placemark><name>313410</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.1039,-19.3727,0</coordinates></Point></Placemark>
+		<Placemark><name>315950</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.3887,-19.4128,0</coordinates></Point></Placemark>
+		<Placemark><name>311840</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.4567,-19.1702,0</coordinates></Point></Placemark>
+		<Placemark><name>310110</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-41.2139,-19.6252,0</coordinates></Point></Placemark>
+</Document>
+</kml>
