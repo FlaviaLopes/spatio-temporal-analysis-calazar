@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<name>Cluster 6 Locations</name>
+		<Placemark><name>315780</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.8366,-19.7448,0</coordinates></Point></Placemark>
+		<Placemark><name>317120</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.9448,-19.7309,0</coordinates></Point></Placemark>
+		<Placemark><name>315670</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.7792,-19.8513,0</coordinates></Point></Placemark>
+		<Placemark><name>313760</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.8858,-19.6284,0</coordinates></Point></Placemark>
+		<Placemark><name>316295</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.9904,-19.6969,0</coordinates></Point></Placemark>
+		<Placemark><name>310620</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.96,-19.9027,0</coordinates></Point></Placemark>
+		<Placemark><name>311787</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.975,-19.6421,0</coordinates></Point></Placemark>
+		<Placemark><name>316830</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-43.6856,-19.634,0</coordinates></Point></Placemark>
+		<Placemark><name>315460</name><visibility>0</visibility><description></description><styleUrl>results.kml#high-rate-placemark</styleUrl><Point><coordinates>-44.0719,-19.7795,0</coordinates></Point></Placemark>
+</Document>
+</kml>

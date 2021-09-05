@@ -1,0 +1,240 @@
+                                 _____________________________
+
+                                         SaTScan v10.0
+                                 _____________________________
+
+
+Program run on: Sat Sep  4 12:51:34 2021
+
+Retrospective Space-Time analysis
+scanning for clusters with high rates
+using the Space-Time Permutation model.
+_______________________________________________________________________________________________
+
+SUMMARY OF DATA
+
+Study period.......................: 2007/1/1 to 2019/12/31
+Number of locations................: 500
+Total number of cases..............: 14506
+_______________________________________________________________________________________________
+
+CLUSTERS DETECTED
+
+1.Location IDs included.: 150215, 150277, 150775, 150840, 150034, 150553, 150295, 150616,
+                          150563, 150420
+  Coordinates / radius..: (6,532197 S, 49,848958 W) / 101,98 km
+  Time frame............: 2017/1/1 to 2019/12/31
+  Number of cases.......: 595
+  Expected cases........: 198,44
+  Observed / expected...: 3,00
+  Test statistic........: 262,345578
+  P-value...............: < 0,00000000000000001
+
+2.Location IDs included.: 172130, 171090, 170360, 171840, 171050, 170930, 171570, 171888,
+                          170550, 172125, 171110, 170330, 170900, 170305, 171488, 171670,
+                          171665, 170825, 171650, 170307, 171870, 170320, 170770, 170410,
+                          170830, 171180, 171850, 170600, 170230, 170210, 171330, 171630,
+                          172110, 170300, 170720, 170384, 210280, 170388, 150270, 171875,
+                          171320, 171200, 172208, 170190, 170130, 171395, 171886, 170110,
+                          170025, 171240
+  Coordinates / radius..: (8,384330 S, 48,111200 W) / 180,61 km
+  Time frame............: 2007/1/1 to 2013/12/31
+  Number of cases.......: 1826
+  Expected cases........: 1284,66
+  Observed / expected...: 1,42
+  Test statistic........: 111,980385
+  P-value...............: < 0,00000000000000001
+
+3.Location IDs included.: 150613
+  Coordinates / radius..: (8,027605 S, 50,029642 W) / 19,11 km
+  Time frame............: 2014/1/1 to 2016/12/31
+  Number of cases.......: 222
+  Expected cases........: 79,15
+  Observed / expected...: 2,80
+  Test statistic........: 86,811644
+  P-value...............: < 0,00000000000000001
+
+4.Location IDs included.: 210087, 210825, 210735, 211400, 211003, 210927, 210830, 210465,
+                          210637, 210980, 210923, 210690, 210745, 210650, 211050, 210315,
+                          210760, 211280, 210860, 211170, 210250, 210850, 211227, 211245,
+                          210840, 210317, 210515, 210467, 210177, 211102, 211100, 210990,
+                          211290, 210047, 210135, 210632, 210190, 210312, 210870, 211172,
+                          210240, 210100, 210070, 210565, 210355, 211240, 210200, 210680,
+                          210040, 150195, 211178, 210020, 210740, 210675, 210490, 210197,
+                          210590, 210055, 210125, 210260, 211300, 211000, 150495, 211020,
+                          210130, 210215, 211130, 210663, 210310
+  Coordinates / radius..: (2,949126 S, 45,668794 W) / 160,95 km
+  Time frame............: 2014/1/1 to 2016/12/31
+  Number of cases.......: 465
+  Expected cases........: 255,66
+  Observed / expected...: 1,82
+  Test statistic........: 70,365602
+  P-value...............: < 0,00000000000000001
+
+5.Location IDs included.: 150310, 150450, 150180, 150590, 150580, 150030, 150280, 150110,
+                          150835, 150070, 150520, 150770, 150600, 150172, 150400, 150250,
+                          150210, 150490, 150445, 150640, 150460, 150548, 150570, 150330,
+                          150120, 150085, 150480, 150780, 150010, 150050, 150200, 150470,
+                          150130, 150810, 150815, 150630, 150790, 150140, 150178, 150080,
+                          150795, 150020, 150442, 150150, 150475, 150506, 150635, 150260,
+                          150700, 150040, 150285, 150650, 150190, 150820, 150800, 150710,
+                          150275, 150746, 150309, 150340, 150240, 150565, 150145, 150680,
+                          150796, 150290, 150720, 150740, 150440, 150345, 150095, 150380,
+                          150760, 150410, 150320, 150370, 150660, 150405, 150430, 150510,
+                          150500, 150350, 150497, 150690, 150160, 150620, 150560, 150550,
+                          150618, 150230
+  Coordinates / radius..: (1,404918 S, 51,643696 W) / 494,96 km
+  Time frame............: 2007/1/1 to 2010/12/31
+  Number of cases.......: 1044
+  Expected cases........: 731,06
+  Observed / expected...: 1,43
+  Test statistic........: 62,638748
+  P-value...............: < 0,00000000000000001
+
+6.Location IDs included.: 170255, 171830, 171880, 170389, 170290, 172080, 170380, 172020,
+                          170220, 210530
+  Coordinates / radius..: (5,465414 S, 47,880957 W) / 36,59 km
+  Time frame............: 2007/1/1 to 2010/12/31
+  Number of cases.......: 321
+  Expected cases........: 194,93
+  Observed / expected...: 1,65
+  Test statistic........: 34,602447
+  P-value...............: < 0,00000000000000001
+
+7.Location IDs included.: 210180, 211080, 211065, 210610, 210800, 210730, 211190, 210670,
+                          210970, 210770, 211110, 211160, 210350, 210408, 210790, 211195,
+                          210545, 210150, 210410, 210592, 211070, 210230, 211230, 210420,
+                          210725, 210975, 211200, 210462, 211090, 210409, 210470, 210160,
+                          210460, 210780, 210910, 210480, 210140, 211174, 210407, 210547,
+                          210440, 210950, 211157, 211125, 210380, 211163, 210560, 210660,
+                          210450, 211167, 211180, 211107, 210535
+  Coordinates / radius..: (7,218800 S, 44,559857 W) / 257,55 km
+  Time frame............: 2014/1/1 to 2019/12/31
+  Number of cases.......: 872
+  Expected cases........: 683,20
+  Observed / expected...: 1,28
+  Test statistic........: 25,265459
+  P-value...............: 0,00000000000011
+
+8.Location IDs included.: 210203, 210542, 210232
+  Coordinates / radius..: (4,489968 S, 46,853241 W) / 56,59 km
+  Time frame............: 2017/1/1 to 2019/12/31
+  Number of cases.......: 61
+  Expected cases........: 25,38
+  Observed / expected...: 2,40
+  Test statistic........: 17,921539
+  P-value...............: 0,0000000041
+_______________________________________________________________________________________________
+
+PARAMETER SETTINGS
+
+Input
+-----
+  Case File        : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/Cases_PA_MA_TO.cas
+  Time Precision   : Year
+  Start Time       : 2007/1/1
+  End Time         : 2019/12/31
+  Coordinates File : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/Coordinates_PA_MA_TO.geo
+  Grid File        : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/Grid_PA_MA_TO.grd
+  Coordinates      : Latitude/Longitude
+
+Analysis
+--------
+  Type of Analysis        : Retrospective Space-Time
+  Probability Model       : Space-Time Permutation
+  Scan for Areas with     : High Rates
+  Time Aggregation Units  : Year
+  Time Aggregation Length : 3
+
+Output
+------
+  Main Results File       : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.txt
+  Cluster File            : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.col.txt
+  Google Earth File       : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.kml
+  Google Maps File        : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.clustermap.html
+  Shapefile (Cluster)     : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.clustermap.col.shp
+  Cartesian Graph File    : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.html
+  Cluster File            : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.col.dbf
+  Stratified Cluster File : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.sci.txt
+  Location File           : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.gis.txt
+  Location File           : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.gis.dbf
+  Shapefile (Locations)   : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.gis.shp
+  Simulated LLRs File     : /home/flavia/Projeto Pesquisa/spatio-temporal-analysis-calazar/output/satscan_experiment_data/results_PA_MA_TO/space-time-permutation/COM_GRID/results.cluster.llr.txt
+
+Data Checking
+-------------
+  Temporal Data Check     : Check to ensure that all cases and controls are within the specified temporal study period.
+  Geographical Data Check : Check to ensure that all observations (cases, controls and populations) are within the specified geographical area.
+
+Spatial Neighbors
+-----------------
+  Use Non-Euclidean Neighbors file : No
+  Use Meta Locations File          : No
+  Multiple Coordinates Type        : Allow only one set of coordinates per location ID.
+
+Locations Network
+-----------------
+  Use Locations Network File : No
+  Locations Network File     : 
+  Locations Network Purpose  : Network Definition
+
+Spatial Window
+--------------
+  Maximum Spatial Cluster Size : 50 percent of population at risk
+  Window Shape                 : Circular
+
+Temporal Window
+---------------
+  Minimum Temporal Cluster Size : 1 Year
+  Maximum Temporal Cluster Size : 50 percent of study period
+
+Cluster Restrictions
+--------------------
+  Minimum Cases in Cluster for High Rates : 2
+  Restrict High Rate Clusters             : No
+
+Space And Time Adjustments
+--------------------------
+  Adjust for Weekly Trends, Nonparametric : No
+
+Inference
+---------
+  P-Value Reporting                  : Default Combination
+  Number of Replications             : 999
+  Adjusting for More Likely Clusters : No
+
+Cluster Drilldown
+-----------------
+  Standard Drilldown on Detected Clusters  : No
+  Bernoulli Drilldown on Detected Clusters : No
+
+Spatial Output
+--------------
+  Automatically Launch Map                  : Yes
+  Compress KML File into KMZ File           : No
+  Include All Location IDs in the Clusters  : Yes
+  Cluster Location Threshold - Separate KML : 1000
+  Report Hierarchical Clusters              : Yes
+  Criteria for Reporting Secondary Clusters : No Geographical Overlap
+  Restrict Reporting to Smaller Clusters    : No
+
+Temporal Graphs
+---------------
+  Produce Temporal Graphs : No
+
+Other Output
+------------
+  Report Critical Values     : No
+  Report Monte Carlo Rank    : No
+  Print ASCII Column Headers : No
+
+Run Options
+-----------
+  Processor Usage   : All Available Processors
+  Suppress Warnings : No
+  Logging Analysis  : No
+_______________________________________________________________________________________________
+
+Program completed  : Sat Sep  4 12:51:36 2021
+Total Running Time : 2 seconds
+Processor Usage    : 8 processors
