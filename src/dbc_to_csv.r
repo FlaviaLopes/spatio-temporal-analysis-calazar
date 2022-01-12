@@ -9,6 +9,6 @@ dbc_to_csv <- function(input, output){
     files <- files[1:length(files)]
     for (i in 1:length(files)){
         df <- read.dbc(paste(input_path, '/', files[i], sep=''))
-        write.csv(df, paste(output_path, '/', unlist(strsplit(files[i], '\\.'))[1], '.csv', sep=''))
+        write.csv(df, paste(output_path, '/', unlist(strsplit(files[i], '\\.'))[1], '_raw.csv', sep=''))
     }
 }

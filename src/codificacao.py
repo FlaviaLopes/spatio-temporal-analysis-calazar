@@ -23,7 +23,7 @@ def convert_leivis_columns_data_types(input, output):
         'DT_DESLC2',
         'DT_DESLC3'
     ]
-    to_int_columns = ['CO_MN_INF', 'CO_MN_RESI', 'CO_MN_NOT', 'CS_GESTANT', 'CS_RACA',
+    to_int_columns = ['ANO', 'CO_MN_INF', 'CO_MN_RESI', 'CO_MN_NOT', 'CS_GESTANT', 'CS_RACA',
                       'ID_OCUPA_N', 'CS_ESCOL_N', 'CO_PAIS', 'FEBRE', 'FRAQUEZA',
                       'EDEMA', 'EMAGRECIMENTO', 'DROGA', 'EVOLUCAO', 'DOENCA_TRABALHO',
                       'FALENCIA', 'TOSSE', 'PALIDEZ', 'BACO', 'INFECCIOSO', 'FEN_HEMORR',

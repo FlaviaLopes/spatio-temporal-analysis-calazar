@@ -2,17 +2,17 @@ import pandas as pd
 import numpy as np
 
 
-def create_leivis_age_column(input, output):
+def create_leivis_age_column(input_data, output):
     """
     Descrição: IDADE no dia da notificação "DT_NOT - DT_NASC".
     Se uma das datas estiver ausente, a idade é extraída do campo "NU_IDADE_N"
     Etapa: Enriquecimento
     Operação: Construção de atributos
-    :param input:
+    :param input_data:
     :param output:
     :return:
     """
-    data = pd.read_csv(f'../data/{input}', parse_dates=['DT_NOT', 'DT_NASC'])
+    data = pd.read_csv(f'../data/{input_data}', parse_dates=['DT_NOT', 'DT_NASC'])
     data['IDADE'] = np.round((data.DT_NOT - data.DT_NASC) / np.timedelta64('1', 'Y'), 6)
 
     for index, row in data.loc[data.IDADE.isnull(), ['NU_IDADE_N', 'IDADE']].iterrows():
@@ -61,16 +61,13 @@ def rates_per_year_groupby_municipalities(cases_per_year, population, output):
     """
     Descrição:
     | Importância do indicador: Está relacionado à exposição de indivíduos à picada de fêmeas de flebotomíneos
-    | infectadas com protozoários do gênero Leishmania;
-    |
-    | Identificar e monitorar no tempo o risco de ocorrência de casos de LV em determinada população;
-    |
+    | infectadas com protozoários do gênero Leishmania;    |
+    | Identificar e monitorar no tempo o risco de ocorrência de casos de LV em determinada população;    |
     | Permite analisar as variações populacionais, geográficas e temporais na frequência de casos confirmados
-    | de LV, como parte do conjunto de ações de vigilância epidemiológica e ambiental da doença;
-    |
-    | Contribui para a avaliação e orientação das medidas de controle vetorial de flebotomíneos;
-    |
-    | Subsidia processos de planejamento, gestão e avaliação de políticas e ações de saúde direcionadas ao controle da LV;
+    | de LV, como parte do conjunto de ações de vigilância epidemiológica e ambiental da doença;    |
+    | Contribui para a avaliação e orientação das medidas de controle vetorial de flebotomíneos;    |
+    | Subsidia processos de planejamento, gestão e avaliação de políticas e ações de saúde direcionadas
+    | ao controle da LV;
     |
     | Limitações do indicador: Alguns casos do numerador não estarão contidos no denominador (casos
     | alóctones).
@@ -86,10 +83,7 @@ def rates_per_year_groupby_municipalities(cases_per_year, population, output):
     """
     rates_per_year = pd.read_csv(f'../data/{cases_per_year}', index_col='ibge_code')
     pop = pd.read_csv(f'../data/{population}').set_index('MUNIC_RES')
-    pop.columns = pop.columns.astype(int)
     for idx in rates_per_year.index:
-        try:
-            rates_per_year.loc[idx] = rates_per_year.loc[idx] / pop.loc[idx] * 100000
-        except:
-            print(f'{rates_per_year.loc[idx]}-{pop.loc[idx]}')
+        rates_per_year.loc[idx] = rates_per_year.loc[idx] / pop.loc[idx] * 100000
+
     rates_per_year.fillna(0).to_csv(f'../data/{output}')
