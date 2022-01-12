@@ -180,3 +180,19 @@ def correct_brasil_municipios_co_municipalities(input, output):
     data.columns = ['ibge_code', 'municipio', 'estado', 'mesorregiao', 'microrregiao']
     data.ibge_code = data.ibge_code.apply(lambda x: str(x)[:6])
     data.to_csv(f'../data/{output}', index=False, encoding='utf-8')
+
+
+def correct_poligonos_municipalities(input, output):
+    """
+    Etapa: Limpeza
+    Operação: Limpeza de inconsistências por correção de erros
+    :param input:
+    :param output:
+    :return:
+    """
+    import geopandas as gpd
+    shapes = gpd.read_file(f'../data/{input}', encoding='utf-8')
+    shapes.columns = ['ibge_code', 'municipio', 'co_uf', 'area_km2', 'geometry']
+    shapes.ibge_code = shapes.ibge_code.apply(lambda x: x[0:6])
+    shapes.ibge_code = shapes.ibge_code.astype(int)
+    shapes.to_file(f'../data/{output}', encoding='utf-8', index=False)

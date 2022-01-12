@@ -86,10 +86,6 @@ def rates_per_year_groupby_municipalities(cases_per_year, population, output):
     """
     rates_per_year = pd.read_csv(f'../data/{cases_per_year}', index_col='ibge_code')
     pop = pd.read_csv(f'../data/{population}').set_index('MUNIC_RES')
-    pop.columns = pop.columns.astype(int)
     for idx in rates_per_year.index:
-        try:
-            rates_per_year.loc[idx] = rates_per_year.loc[idx] / pop.loc[idx] * 100000
-        except:
-            print(f'{rates_per_year.loc[idx]}-{pop.loc[idx]}')
+        rates_per_year.loc[idx] = rates_per_year.loc[idx] / pop.loc[idx] * 100000
     rates_per_year.fillna(0).to_csv(f'../data/{output}')

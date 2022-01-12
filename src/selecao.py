@@ -126,3 +126,88 @@ def select_leivis(input, output):
     )
 
     data.to_csv(f"../data/{output}", index=False, encoding='utf-8')
+
+
+def select_poligonos(input, output):
+    """
+    Etapa: Seleção
+    Operação: Redução de Dados Horizontal Direta
+    :param input:
+    :param output:
+    :return:
+    """
+    import geopandas as gpd
+    shapes = gpd.read_file(f'../data/{input}', encoding='utf-8')
+    shapes.loc[shapes.SIGLA_UF == 'PA'].to_file(f'../data/{output}', index=False, encoding='utf-8')
+
+
+def create_satscan_cases_file(input, output):
+    """
+    Descrição: O formato esperado para o arquivo de casos, usando o modelo Poisson de probabilidade, é:
+    `<Location ID><Number of Cases><Date/Time><Covariate 1><Covariate N>`
+    Etapa: Seleção
+    Operação:
+    :param input:
+    :param output:
+    :return:
+    """
+    cases = pd.read_csv(f'../data/{input}', index_col='ibge_code')
+    satscan_cases = pd.DataFrame(columns=['ibge_code', 'cases', 'year'])
+    for it in cases.index:
+        aux = pd.DataFrame(columns=['ibge_code', 'cases', 'year'])
+        aux.cases = cases.loc[it, :].astype('int')
+        aux.year = cases.columns
+        aux.ibge_code = it
+        satscan_cases = pd.concat([satscan_cases, aux])
+    satscan_cases = satscan_cases.reset_index().drop('index', axis=1)
+    satscan_cases.to_csv(f'../data/{output}', index=False)
+
+
+def create_satscan_population_file(input, output):
+    """
+    Descrição: O formato esperado do arquivo populacional é:
+    <Location ID> <Date/Time> <Population> <Covariate 1> ... <Covariate N>
+    Etapa: Seleção
+    Operação:
+    :param input:
+    :param output:
+    :return:
+    """
+    pop = pd.read_csv(f'../data/{input}', index_col='MUNIC_RES')
+    idx_nan = pop.loc[pop.T.isnull().any(), :].index.values
+    for it in idx_nan:
+        pop.loc[it, :] = pop.loc[it, :].fillna(pop.loc[it, :].mean())
+
+    satscan_pop = pd.DataFrame(columns=['ibge_code', 'year', 'population'])
+    for it in pop.index:
+        aux = pd.DataFrame(columns=['ibge_code', 'year', 'population'])
+        aux.population = pop.loc[it, :]
+        aux.year = pop.columns
+        aux.ibge_code = it
+        satscan_pop = pd.concat([satscan_pop, aux])
+    satscan_pop = satscan_pop.reset_index().drop('index', axis=1)
+    satscan_pop.to_csv(f'../data/{output}', index=False)
+
+
+def create_satscan_grid_file(input, output):
+    """
+    Descrição: "O arquivo de grade opcional define os centróides dos círculos utilizados pela estatística de varredura.
+    Se não for especificado nenhum arquivo de grade, as coordenadas dadas no arquivo de coordenadas serão usadas para esta finalidade."
+    Existem no Pará municípios muito extensos. Se o arquivo de grade não for especificado o centro do município ficará
+    como padrão e distante das regiões densamente habitadas (cidade), por exemplo Altamira. O arquivo de grade vai definir
+    como centróide do município a cidade deste.
+    O formato esperado é <latitude><longitude
+    Etapa: Seleção
+    Operação:
+    :param input:
+    :param output:
+    :return:
+    """
+    import geopandas as gpd
+    geo = gpd.read_file(f'../data/{input}', encoding='latin-1')
+    geo.loc[
+        (geo.NM_UF == 'PARÁ') &
+        (geo.NM_CATEGOR == 'CIDADE') |
+        (geo.NM_LOCALID == 'MUJUÍ DOS CAMPOS'),
+        ['LAT', 'LONG']
+    ].to_csv(f'../data/{output}', index=False)

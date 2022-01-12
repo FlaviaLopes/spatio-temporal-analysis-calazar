@@ -5,4 +5,4 @@ experimentos/satscan_experiment_data/geo_para/geo_*
 experimentos/satscan_experiment_data/geo_br/geo_*
 experimentos/satscan_experiment_data/geo_pa_ma_to/geo_*
 .idea/
-
+__pycache__
